@@ -342,11 +342,10 @@ h1, h2, h3, .brand span, .btn, .eyebrow {
 .checksum code {
   flex: 1;
   min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
   font-family: "JetBrains Mono", monospace;
-  color: #b7c1d9;
+  color: #d6deef;
+  user-select: all;
 }
 .copy {
   background: rgba(255, 255, 255, 0.1);

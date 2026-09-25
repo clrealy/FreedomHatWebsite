@@ -66,3 +66,21 @@ document.querySelectorAll("[data-dl]").forEach((a) =>
     dlNote.hidden = false;
   })
 );
+
+// Copy checksum
+const copyBtn = document.getElementById("copy-sha");
+copyBtn.addEventListener("click", async () => {
+  const code = document.getElementById("sha");
+  try {
+    await navigator.clipboard.writeText(code.textContent);
+    copyBtn.textContent = "Copied!";
+  } catch {
+    const range = document.createRange();
+    range.selectNodeContents(code);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    copyBtn.textContent = "Press Ctrl+C";
+  }
+  setTimeout(() => (copyBtn.textContent = "Copy"), 1800);
+});
