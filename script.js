@@ -58,40 +58,11 @@ const tick = () =>
 tick();
 setInterval(tick, 15000);
 
-// Copy checksum
-document.querySelectorAll("[data-copy]").forEach((btn) =>
-  btn.addEventListener("click", async () => {
-    const text = document.querySelector(btn.dataset.copy).textContent;
-    try {
-      await navigator.clipboard.writeText(text);
-      btn.textContent = "Copied!";
-    } catch {
-      btn.textContent = "Copy failed";
-    }
-    setTimeout(() => (btn.textContent = "Copy"), 1500);
-  })
-);
-
-// Download placeholder
+// Download placeholder until the ISO is hosted
+const dlNote = document.getElementById("dl-note");
 document.querySelectorAll("[data-dl]").forEach((a) =>
   a.addEventListener("click", (e) => {
     e.preventDefault();
-    alert("🎩 Downloads open on launch day. Stay free!");
+    dlNote.hidden = false;
   })
 );
-
-// Reveal on scroll
-const io = new IntersectionObserver(
-  (entries) =>
-    entries.forEach((e) => {
-      if (e.isIntersecting) {
-        e.target.classList.add("in");
-        io.unobserve(e.target);
-      }
-    }),
-  { threshold: 0.12 }
-);
-document.querySelectorAll(".card, .spec, .faq details, .release > *, .download-box").forEach((el) => {
-  el.classList.add("reveal");
-  io.observe(el);
-});
