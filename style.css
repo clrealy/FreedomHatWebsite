@@ -264,6 +264,14 @@ h1, h2, h3, .brand span, .btn, .eyebrow {
 }
 .terminal .p { color: #ff6b81; }
 .terminal .ok { color: #7ee2a8; }
+.card code, .faq code, .checklist code, .steps code, .tagline code {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9em;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: rgba(30, 79, 191, 0.1);
+}
+.tagline code, .steps code { background: rgba(255, 255, 255, 0.15); }
 .cursor { animation: blink 1s steps(1) infinite; color: #ff6b81; }
 @keyframes blink { 50% { opacity: 0; } }
 .taskbar {

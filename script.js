@@ -10,15 +10,15 @@ links.querySelectorAll("a").forEach((a) =>
 );
 
 // Fake terminal on the desktop preview
+const P = '<span class="p">fhcl@freedomhat</span>:~$ ';
 const lines = [
-  ['<span class="p">patriot@freedomhat</span>:~$ ', "neofetch --short"],
-  ["", "OS:      Freedom Hat Consumer Linux 1.0 (Patriotism)"],
-  ["", "Kernel:  6.18 LTS"],
-  ["", "Desktop: Liberty Desktop 1.0"],
-  ["", "Theme:   Old Glory [dark]"],
-  ['<span class="p">patriot@freedomhat</span>:~$ ', "sudo freedom update"],
-  ['<span class="ok">✔</span> ', "System is up to date. Let freedom boot. 🦅"],
-  ['<span class="p">patriot@freedomhat</span>:~$ ', ""],
+  [P, "apt install steam"],
+  ["", "🦅 apt is disabled on FHCL. Use 'eagle' instead."],
+  [P, "eagle install steam"],
+  ['<span class="ok">✔</span> ', "steam installed."],
+  [P, "liberty update"],
+  ['<span class="ok">✔</span> ', "System and Flatpaks up to date."],
+  [P, ""],
 ];
 const term = document.getElementById("terminal-text");
 const escape = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
