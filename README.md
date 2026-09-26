@@ -16,7 +16,7 @@ Served by **GitHub Pages** from the repo root (no build step). `CNAME` sets the 
 
 ## Downloads
 
-The ISO is shared by torrent only: `downloads/FHCL-Patriotism.iso.torrent` (served by GitHub Pages). It has no web seed, so it only downloads while someone is seeding. Keep the ISO seeding in qBittorrent.
+The ISO will be shared by torrent only, from `downloads/` (served by GitHub Pages). It's not published yet: there's no torrent file or download button right now. A torrent without a web seed only downloads while someone is seeding, so keep the ISO seeding in qBittorrent once it's up.
 
 To make a torrent for a new ISO, use qBittorrent's **Tools → Torrent Creator** with these trackers, then replace the file in `downloads/` and update the SHA256 in `index.html`:
 
