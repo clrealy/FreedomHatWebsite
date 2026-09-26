@@ -26,4 +26,6 @@ If you upload a new build, update the filename and the SHA256 in the download se
 
 Website content is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0). See [`LICENSE`](LICENSE). Credit “The Freedom Hat Project” and share changes under the same license.
 
-Linux, KDE, Plasma and Debian are trademarks of their respective owners and are not covered by this license.
+**Not covered:** the flag background photo (`assets/hero-flag.webp`) is not ours and is not licensed under CC BY-SA. Linux, KDE, Plasma and Debian are trademarks of their respective owners.
+
+FHCL's own tools (`eagle`, `liberty`, `fhcl-master-setup.sh`) live outside this repo and are licensed under the [GNU GPL v3 or later](https://www.gnu.org/licenses/gpl-3.0.html).
