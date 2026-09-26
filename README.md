@@ -17,6 +17,7 @@ Site domain: `getfreedomhat.org` (registered at GoDaddy, DNS on Cloudflare, `@` 
 The ISO is too big for Netlify's free bandwidth, so it lives in a Cloudflare R2 bucket served at `dl.getfreedomhat.org`:
 
 - `https://dl.getfreedomhat.org/FHCL-Patriotism.iso`
-- `https://dl.getfreedomhat.org/FHCL-Patriotism.iso.sha256`
+
+The SHA256 is published on the page itself, not as a separate file.
 
 If you upload a new build, update the filename and the SHA256 in the download section of `index.html`.
