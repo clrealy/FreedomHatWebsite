@@ -21,3 +21,9 @@ The ISO is too big for Netlify's free bandwidth, so it lives in a Cloudflare R2 
 The SHA256 is published on the page itself, not as a separate file.
 
 If you upload a new build, update the filename and the SHA256 in the download section of `index.html`.
+
+## License
+
+Website content is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0). See [`LICENSE`](LICENSE). Credit “The Freedom Hat Project” and share changes under the same license.
+
+Linux, KDE, Plasma and Debian are trademarks of their respective owners and are not covered by this license.
