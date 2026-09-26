@@ -10,4 +10,13 @@ Plain static site (`index.html`, `style.css`, `script.js`, `assets/`), no build 
 2. Choose the branch to deploy. `netlify.toml` already sets the publish directory to the repo root with no build command.
 3. Deploy. Every push to that branch redeploys the site.
 
-The ISO is not hosted here. It's a 4.4 GB download, far past what the free Netlify plan's bandwidth allows, so link the download button (`data-dl` in `index.html`) to an external host.
+Site domain: `getfreedomhat.org` (registered at GoDaddy, DNS on Cloudflare, `@` and `www` CNAME to the Netlify site, DNS only).
+
+## Downloads
+
+The ISO zip is too big for Netlify's free bandwidth, so it lives in a Cloudflare R2 bucket served at `dl.getfreedomhat.org`:
+
+- `https://dl.getfreedomhat.org/FHCL-Patriotism.zip`
+- `https://dl.getfreedomhat.org/FHCL-Patriotism.iso.sha256`
+
+If you upload a new build, update the filename and the SHA256 in the download section of `index.html`.

@@ -58,15 +58,6 @@ const tick = () =>
 tick();
 setInterval(tick, 15000);
 
-// Download placeholder until the ISO is hosted
-const dlNote = document.getElementById("dl-note");
-document.querySelectorAll("[data-dl]").forEach((a) =>
-  a.addEventListener("click", (e) => {
-    e.preventDefault();
-    dlNote.hidden = false;
-  })
-);
-
 // Copy checksum
 const copyBtn = document.getElementById("copy-sha");
 copyBtn.addEventListener("click", async () => {

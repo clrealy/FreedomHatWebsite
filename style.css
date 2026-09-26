@@ -356,7 +356,6 @@ h1, h2, h3, .brand span, .btn, .eyebrow {
   cursor: pointer;
   font: inherit;
 }
-.dl-note { margin: 16px 0 0; color: #ffd6dc; }
 .steps { margin: 26px 0 0; padding-left: 22px; color: #d6deef; }
 .steps li { margin-bottom: 6px; }
 
