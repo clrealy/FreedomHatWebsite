@@ -4,20 +4,22 @@ Website for Freedom Hat Consumer Linux (FHCL) 1.0 “Patriotism”.
 
 Plain static site (`index.html`, `style.css`, `script.js`, `assets/`), no build step.
 
-## Deploy on Netlify
+## Hosting
 
-1. In Netlify: **Add new project → Import an existing project → GitHub**, pick this repo.
-2. Choose the branch to deploy. `netlify.toml` already sets the publish directory to the repo root with no build command.
-3. Deploy. Every push to that branch redeploys the site.
+Served by **GitHub Pages** from the repo root (no build step). `CNAME` sets the custom domain `getfreedomhat.org`, and `.nojekyll` makes Pages serve the files as-is.
 
-Site domain: `getfreedomhat.org` (registered at GoDaddy, DNS on Cloudflare, `@` and `www` CNAME to the Netlify site, DNS only).
+1. Repo **Settings → Pages → Build and deployment**: Source **Deploy from a branch**, pick the site branch and `/ (root)`.
+2. DNS is on Cloudflare (domain registered at GoDaddy). Records, all **DNS only** (grey cloud):
+   - `A` `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - `CNAME` `www` → `clrealy.github.io`
+3. Back in **Settings → Pages**, turn on **Enforce HTTPS** once the certificate is issued.
 
 ## Downloads
 
-The ISO is too big for Netlify's free bandwidth, so it lives in a Cloudflare R2 bucket served at `dl.getfreedomhat.org`:
+The ISO is too big for GitHub Pages (100 MB file limit), so it lives in a Cloudflare R2 bucket served at `dl.getfreedomhat.org`:
 
 - `https://dl.getfreedomhat.org/FHCL-Patriotism.iso`
-- `downloads/FHCL-Patriotism.iso.torrent` (in this repo, served by Netlify)
+- `downloads/FHCL-Patriotism.iso.torrent` (in this repo, served by GitHub Pages)
 
 The torrent lists the R2 URL as a web seed, so it downloads even when nobody else is seeding. To rebuild it for a new ISO:
 
