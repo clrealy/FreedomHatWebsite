@@ -17,7 +17,7 @@ Site domain: `getfreedomhat.org` (registered at GoDaddy, DNS on Cloudflare, `@` 
 The ISO is too big for Netlify's free bandwidth, so it lives in a Cloudflare R2 bucket served at `dl.getfreedomhat.org`:
 
 - `https://dl.getfreedomhat.org/FHCL-Patriotism.iso`
-- `downloads/FHCL-Patriotism.torrent` (in this repo, served by Netlify)
+- `downloads/FHCL-Patriotism.iso.torrent` (in this repo, served by Netlify)
 
 The torrent lists the R2 URL as a web seed, so it downloads even when nobody else is seeding. To rebuild it for a new ISO:
 
@@ -28,7 +28,7 @@ mktorrent -l 22 \
   -a udp://tracker.torrent.eu.org:451/announce \
   -w https://dl.getfreedomhat.org/FHCL-Patriotism.iso \
   -c "Freedom Hat Consumer Linux 1.0 Patriotism" \
-  -o FHCL-Patriotism.torrent FHCL-Patriotism.iso
+  -o FHCL-Patriotism.iso.torrent FHCL-Patriotism.iso
 ```
 
 Then commit the new `.torrent` to `downloads/` in this repo.
